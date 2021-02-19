@@ -13,6 +13,26 @@ class profile::r10k {
     ensure => installed,
   }
 
+  file {
+    default:
+      ensure => directory,
+      mode   => '0755',
+      ;
+    '/usr/local/etc/puppet/code/environments':
+      owner => 'r10k',
+      group => 'puppet',
+      mode  => '0750',
+      ;
+    '/usr/local/etc/r10k':
+      owner  => 'root',
+      group  => 'wheel',
+      ;
+    '/var/puppet/r10k':
+      owner => 'r10k',
+      group => 'r10k',
+      ;
+  }
+
   file { '/usr/local/etc/r10k/r10k.yaml':
     ensure  => file,
     owner   => 'root',
