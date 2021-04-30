@@ -1,4 +1,5 @@
 class role::puppetserver inherits role::base {
-  include profile::r10k
   include profile::choria::broker
+  include profile::puppetserver
+  include profile::r10k
 }

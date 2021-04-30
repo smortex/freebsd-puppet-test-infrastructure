@@ -9,3 +9,7 @@ node default {
 node 'puppet.lan' {
   include role::puppetserver
 }
+
+node 'puppetdb.lan' {
+  include role::puppetdb
+}
