@@ -1,0 +1,7 @@
+---
+mcollective::site_policies:
+  - action: "allow"
+    callers: "choria=freebsd.mcollective"
+    actions: "*"
+    facts: "*"
+    classes: "*"
