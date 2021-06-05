@@ -5,3 +5,6 @@ mcollective::site_policies:
     actions: "*"
     facts: "*"
     classes: "*"
+# FIXME https://github.com/choria-plugins/mcollective_choria/pull/16
+mcollective_choria::config:
+  tasks.wrapper_path: "/usr/local/bin/execution_wrapper"

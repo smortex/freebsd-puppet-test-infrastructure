@@ -10,7 +10,17 @@ class profile::choria::server (
   }
 
   class { 'mcollective':
-    client => $client,
+    client         => $client,
+    plugin_classes => [
+      'mcollective_agent_bolt_tasks',
+      'mcollective_agent_filemgr',
+      'mcollective_agent_nettest',
+      'mcollective_agent_package',
+      'mcollective_agent_puppet',
+      'mcollective_agent_service',
+      'mcollective_choria',
+      'mcollective_util_actionpolicy',
+    ],
   }
 
   Mcollective::Module_plugin <| |> ~> Class['choria::service']
