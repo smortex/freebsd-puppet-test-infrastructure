@@ -93,5 +93,6 @@ iocage exec 'puppet.lan' 'puppet apply --detailed-exitcodes; if [ $? -ne 2 ]; th
 
 for node in puppet.lan puppetdb.lan node1.lan node2.lan; do
 	iocage exec $node 'puppet agent --test --detailed-exitcodes; if [ $? -ne 0 -a $? -ne 2 ]; then echo "Failed to apply catalog"; exit 1; fi'
-	iocage exec $JAIL 'puppet apply' < manifests/puppet.pp
 done
+
+iocage exec $JAIL 'puppet apply' < manifests/puppet.pp
