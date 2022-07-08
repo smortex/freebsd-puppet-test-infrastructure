@@ -44,7 +44,7 @@ if [ $interactive -eq 1 ]; then
 else
   iocage exec $TEMPLATE_NAME "pkg update"
   iocage exec $TEMPLATE_NAME "pkg upgrade -y"
-  iocage exec $TEMPLATE_NAME "pkg fetch -yd puppet6 puppet7 puppetserver6 puppetserver7 puppetdb6 puppetdb7 puppetdb-terminus6 puppetdb-terminus7 postgresql11-server postgresql11-contrib git-lite"
+  iocage exec $TEMPLATE_NAME "pkg fetch -yd puppet6 puppet7 puppetserver6 puppetserver7 puppetdb6 puppetdb7 puppetdb-terminus6 puppetdb-terminus7 postgresql11-server postgresql11-contrib git-lite rubygem-r10k choria rubygem-choria-mcorpc-support rubygem-net-ping"
 fi
 
 iocage stop $TEMPLATE_NAME
