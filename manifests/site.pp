@@ -13,3 +13,7 @@ node 'puppet.lan' {
 node 'puppetdb.lan' {
   include role::puppetdb
 }
+
+node 'puppetboard.lan' {
+  include role::puppetboard
+}

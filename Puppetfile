@@ -3,6 +3,8 @@ mod 'puppetlabs-stdlib', '7.0.1'
 mod 'puppetlabs-cron_core',    '1.0.5'
 mod 'puppetlabs-sshkeys_core', '2.2.0'
 
+mod 'puppet-puppetboard', '9.0.0'
+
 mod 'choria-choria',                        '0.23.1'
 mod 'choria-mcollective',                   '0.13.2'
 mod 'choria-mcollective_agent_bolt_tasks',  '0.20.1'
