@@ -72,6 +72,14 @@ master:
 EOT
 iocage exec puppet.lan 'service puppetserver restart'
 
+JAIL=puppetboard.lan
+iocage create -t $TEMPLATE -n $JAIL vnet=on ip4_addr='vnet0|10.0.0.12' defaultrouter=10.0.0.1
+iocage start $JAIL
+iocage exec $JAIL "pkg install -yU puppet${puppet_version}"
+iocage exec $JAIL 'puppet module install /root/puppetlabs-host_core-1.0.3.tar.gz --force'
+iocage exec $JAIL 'puppet apply' < manifests/common.pp
+iocage exec $JAIL 'puppet agent -t || :'
+
 JAIL=node1.lan
 iocage create -t $TEMPLATE -n $JAIL vnet=on ip4_addr='vnet0|10.0.0.100' defaultrouter=10.0.0.1
 iocage start $JAIL
@@ -92,7 +100,7 @@ iocage exec 'puppet.lan' 'puppetserver ca sign --all'
 
 iocage exec 'puppet.lan' 'puppet apply --detailed-exitcodes; if [ $? -ne 2 ]; then echo "Failed to apply catalog"; exit 1; fi' < manifests/r10k.pp
 
-for node in puppet.lan puppetdb.lan node1.lan node2.lan; do
+for node in puppet.lan puppetdb.lan puppetboard.lan node1.lan node2.lan; do
 	iocage exec $node 'puppet agent --test --detailed-exitcodes; if [ $? -ne 0 -a $? -ne 2 ]; then echo "Failed to apply catalog"; exit 1; fi'
 done
 

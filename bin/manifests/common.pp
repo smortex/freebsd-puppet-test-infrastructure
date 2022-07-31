@@ -10,6 +10,12 @@ host { 'puppetdb.lan':
     'puppetdb',
   ],
 }
+host { 'puppetboard.lan':
+  ip           => '10.0.0.12',
+  host_aliases => [
+    'puppetboard',
+  ],
+}
 host { 'node1.lan':
   ip           => '10.0.0.100',
   host_aliases => [
