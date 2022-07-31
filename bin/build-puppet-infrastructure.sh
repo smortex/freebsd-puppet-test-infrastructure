@@ -61,6 +61,7 @@ iocage exec puppet.lan 'cat > /usr/local/etc/puppet/puppet.conf' << EOT
 [master]
   storeconfigs = true
   storeconfigs_backend = puppetdb
+  reports = puppetdb
 EOT
 iocage exec puppet.lan 'cat > /usr/local/etc/puppet/routes.yaml' << EOT
 ---
