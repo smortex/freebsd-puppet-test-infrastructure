@@ -3,7 +3,8 @@ mod 'puppetlabs-stdlib', '7.0.1'
 mod 'puppetlabs-cron_core',    '1.0.5'
 mod 'puppetlabs-sshkeys_core', '2.2.0'
 
-mod 'puppet-puppetboard', '9.0.0'
+# mod 'puppet-puppetboard', '9.0.0'
+mod 'puppetboard', git: 'https://github.com/voxpupuli/puppet-puppetboard.git', ref: '8d9cfb70fe49c40afa34e3d7fb16bb7872b70c7e'
 
 mod 'choria-choria',                        '0.23.1'
 mod 'choria-mcollective',                   '0.13.2'

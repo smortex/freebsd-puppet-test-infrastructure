@@ -31,35 +31,6 @@ class profile::puppetboard {
     puppetdb_ssl_verify => '/usr/local/www/puppetboard/ssl/ca.pem',
   }
 
-  file { '/var/log/puppetboard':
-    ensure => directory,
-    owner  => 'puppetboard',
-    group  => 'puppetboard',
-    mode   => '0644',
-  }
-
-  file { '/usr/local/www/puppetboard/wsgi.py':
-    ensure  => 'file',
-    owner   => 'root',
-    group   => 'wheel',
-    content => @(WSGI),
-      from __future__ import absolute_import
-      import os
-      import logging
-
-      logging.basicConfig(filename='/var/log/puppetboard/puppetboard.log', level=logging.INFO)
-
-      # Needed if a settings.py file exists
-      os.environ['PUPPETBOARD_SETTINGS'] = '/usr/local/etc/puppetboard/settings.py'
-
-      try:
-          from puppetboard.app import app as application
-      except Exception as inst:
-          logging.exception("Error: %s", str(type(inst)))
-
-      | WSGI
-  }
-
   package { 'uwsgi':
     ensure => installed,
   }
