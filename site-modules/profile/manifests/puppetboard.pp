@@ -1,4 +1,19 @@
 class profile::puppetboard {
+  class { 'puppetboard':
+    puppetdb_host       => 'puppetdb.lan',
+    puppetdb_port       => 8081,
+    puppetdb_cert       => '/usr/local/www/puppetboard/ssl/puppetdb_client_cert.pem',
+    puppetdb_key        => '/usr/local/www/puppetboard/ssl/puppetdb_client_key.pem',
+    puppetdb_ssl_verify => '/usr/local/www/puppetboard/ssl/ca.pem',
+  }
+
+  file { '/usr/local/www/puppetboard/ssl':
+    ensure => directory,
+    owner  => 'root',
+    group  => 'puppetboard',
+    mode   => '0755',
+  }
+
   file { '/usr/local/www/puppetboard/ssl/ca.pem':
     ensure => file,
     owner  => 'root',
@@ -21,14 +36,6 @@ class profile::puppetboard {
     group  => 'puppetboard',
     mode   => '0640',
     source => "/var/puppet/ssl/private_keys/${fact('networking.fqdn')}.pem",
-  }
-
-  class { 'puppetboard':
-    puppetdb_host       => 'puppetdb.lan',
-    puppetdb_port       => 8081,
-    puppetdb_cert       => '/usr/local/www/puppetboard/ssl/puppetdb_client_cert.pem',
-    puppetdb_key        => '/usr/local/www/puppetboard/ssl/puppetdb_client_key.pem',
-    puppetdb_ssl_verify => '/usr/local/www/puppetboard/ssl/ca.pem',
   }
 
   package { 'uwsgi':
