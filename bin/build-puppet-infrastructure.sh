@@ -16,7 +16,6 @@ JAIL=puppet.lan
 iocage create -t $TEMPLATE -n $JAIL vnet=on ip4_addr='vnet0|10.0.0.10' defaultrouter=10.0.0.1
 iocage start $JAIL
 iocage exec $JAIL "pkg install -yU puppet${puppet_version} puppetserver${puppet_version} puppetdb-terminus${puppet_version}"
-iocage exec $JAIL 'puppet module install /root/puppetlabs-host_core-1.0.3.tar.gz --force'
 iocage exec $JAIL 'puppet apply' < manifests/common.pp
 iocage exec $JAIL 'puppet apply' < manifests/puppetserver.pp
 iocage exec $JAIL 'service puppetserver restart'
@@ -25,7 +24,6 @@ JAIL=puppetdb.lan
 iocage create -t $TEMPLATE -n $JAIL vnet=on ip4_addr='vnet0|10.0.0.11' allow_sysvipc=1 defaultrouter=10.0.0.1
 iocage start $JAIL
 iocage exec $JAIL "pkg install -yU puppet${puppet_version} puppetdb${puppet_version} postgresql11-server postgresql11-client sudo icu"
-iocage exec $JAIL 'puppet module install /root/puppetlabs-host_core-1.0.3.tar.gz --force'
 iocage exec $JAIL 'puppet apply' < manifests/common.pp
 iocage exec $JAIL 'sysrc postgresql_enable=yes'
 iocage exec $JAIL 'service postgresql initdb'
@@ -76,7 +74,6 @@ JAIL=puppetboard.lan
 iocage create -t $TEMPLATE -n $JAIL vnet=on ip4_addr='vnet0|10.0.0.12' defaultrouter=10.0.0.1
 iocage start $JAIL
 iocage exec $JAIL "pkg install -yU puppet${puppet_version}"
-iocage exec $JAIL 'puppet module install /root/puppetlabs-host_core-1.0.3.tar.gz --force'
 iocage exec $JAIL 'puppet apply' < manifests/common.pp
 iocage exec $JAIL 'puppet agent -t || :'
 
@@ -84,7 +81,6 @@ JAIL=node1.lan
 iocage create -t $TEMPLATE -n $JAIL vnet=on ip4_addr='vnet0|10.0.0.100' defaultrouter=10.0.0.1
 iocage start $JAIL
 iocage exec $JAIL "pkg install -yU puppet${puppet_version}"
-iocage exec $JAIL 'puppet module install /root/puppetlabs-host_core-1.0.3.tar.gz --force'
 iocage exec $JAIL 'puppet apply' < manifests/common.pp
 iocage exec $JAIL 'puppet agent -t || :'
 
@@ -92,7 +88,6 @@ JAIL=node2.lan
 iocage create -t $TEMPLATE -n $JAIL vnet=on ip4_addr='vnet0|10.0.0.101' defaultrouter=10.0.0.1
 iocage start $JAIL
 iocage exec $JAIL "pkg install -yU puppet${puppet_version}"
-iocage exec $JAIL 'puppet module install /root/puppetlabs-host_core-1.0.3.tar.gz --force'
 iocage exec $JAIL 'puppet apply' < manifests/common.pp
 iocage exec $JAIL 'puppet agent -t || :'
 
