@@ -7,6 +7,25 @@ EOT
   exit 1
 fi
 
+wait_for_puppetserver()
+{
+  set +x
+  printf "Waiting for PuppetServer to be ready"
+  try=0
+  while ! nc -z 10.0.0.10 8140; do
+    try=$((try + 1))
+    if [ $try -eq 60 ]; then
+      echo
+      echo "Timeout reached while waiting for PuppetServer to be ready" >&2
+      exit 1
+    fi
+    printf "."
+    sleep 1
+  done
+  echo
+  set -x
+}
+
 TEMPLATE="$1"
 puppet_version="$2"
 
@@ -38,8 +57,7 @@ iocage exec $JAIL 'service postgresql restart'
 iocage exec $JAIL 'echo "subname = //10.0.0.11:5432/puppetdb" >> /usr/local/etc/puppetdb/conf.d/database.ini'
 iocage exec $JAIL 'echo "username = puppetdb" >> /usr/local/etc/puppetdb/conf.d/database.ini'
 iocage exec $JAIL 'echo "password = puppetdb" >> /usr/local/etc/puppetdb/conf.d/database.ini'
-echo '===> Waiting to Puppet Server to start...'
-sleep 10
+wait_for_puppetserver
 iocage exec $JAIL 'puppet agent -t || :'
 if [ $puppet_version -eq 5 ]; then
   iocage exec puppet.lan 'puppet cert sign --all'
@@ -69,6 +87,7 @@ master:
     cache: yaml
 EOT
 iocage exec puppet.lan 'service puppetserver restart'
+wait_for_puppetserver
 
 JAIL=puppetboard.lan
 iocage create -t $TEMPLATE -n $JAIL vnet=on ip4_addr='vnet0|10.0.0.12' defaultrouter=10.0.0.1
