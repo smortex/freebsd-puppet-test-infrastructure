@@ -51,17 +51,17 @@ iocage exec $JAIL 'puppetdb ssl-setup'
 iocage exec $JAIL 'sysrc puppetdb_enable=yes'
 iocage exec $JAIL 'service puppetdb start'
 
-iocage exec puppet.lan 'cat > /usr/local/etc/puppet/puppetdb.conf' << EOT
+iocage exec puppet.lan 'tee /usr/local/etc/puppet/puppetdb.conf' << EOT
 [main]
 server_urls = https://puppetdb.lan:8081
 EOT
-iocage exec puppet.lan 'cat > /usr/local/etc/puppet/puppet.conf' << EOT
+iocage exec puppet.lan 'tee /usr/local/etc/puppet/puppet.conf' << EOT
 [master]
   storeconfigs = true
   storeconfigs_backend = puppetdb
   reports = puppetdb
 EOT
-iocage exec puppet.lan 'cat > /usr/local/etc/puppet/routes.yaml' << EOT
+iocage exec puppet.lan 'tee /usr/local/etc/puppet/routes.yaml' << EOT
 ---
 master:
   facts:
