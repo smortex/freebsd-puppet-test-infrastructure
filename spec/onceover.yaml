@@ -1,0 +1,17 @@
+---
+classes:
+  - /^role::/
+  - /^profile::/
+
+nodes:
+  - FreeBSD-13.1-64-legacy
+  - FreeBSD-13.1-64-no-legacy
+
+test_matrix:
+  - all_nodes:
+      classes: all_classes
+      tests: spec
+
+functions:
+  puppetdb_query:
+    returns: []

@@ -1,0 +1,573 @@
+{
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCvL/poCeLBK1gzxmu1iqmuACOLUMwWEemqc9HIVVi5C9KDoiUsDqYxlaXuFgWwbDmBFE+sq4OWjnygs0MLRjfBIZex+g5WnF2qUC4rE1fvNQF9txelp6Aiw/evRsVyvzNob72fd1HEN5hwLGx8qE+fIxVeuvonGr+wBnpcZNbwOekk8K0/P4CHbxGr3n56h8PJJ2fQA3PHOqd+mcxCjMb5zGSQz5t+pnKzXd1svEC8Js9UeaQmEnwVeXs6MiacmvfZZIVrCCMsbjDjN7b8aqXAlsCbH6h13rN3dPbXRqqD9thh4s0Muo/5LfCot4foOHS2Lb62POFnTKUdQiBJiz/L",
+  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNk2xlcS1xBmvExKKxqfNSYZCaZpPFz0YI8FzlPkfDN+vqD5/JUK3pJ2PfGq1tfwR/mziRoqf3EehPac5T9lMsk=",
+  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIFeWKguN2ac7NBVugbxxkCy52E5r6C/ezdwa+SSr6Z7P",
+  "sshfp_rsa": "SSHFP 1 1 3b1364bc79ebe47cbc0819473b565a4d37db7193\nSSHFP 1 2 38231477b7208a359dae374706d9cebde9723b37a2c64a796fe789ffc75b4448",
+  "sshfp_ecdsa": "SSHFP 3 1 ae13b092229dc413afc2ce9a98a231ba12627a14\nSSHFP 3 2 5dbe20c3e1964dd815ec7f65d3149af25bc1ef18c1f0fff566f85bb97ea174ec",
+  "sshfp_ed25519": "SSHFP 4 1 8a93fa93b2e8500bdb50c65632106936a5dffe06\nSSHFP 4 2 4db19117c4305772ae0e063b6e26e8f324184e2706494e0d86e57dfa4a80aa4b",
+  "system_uptime": {
+    "days": 0,
+    "hours": 2,
+    "seconds": 10169,
+    "uptime": "2:49 hours"
+  },
+  "uptime_days": 0,
+  "uptime_hours": 2,
+  "uptime_seconds": 10169,
+  "uptime": "2:49 hours",
+  "path": "/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin",
+  "zfs_featurenumbers": "1,2,3,4,5",
+  "zfs_version": "5",
+  "identity": {
+    "group": "wheel",
+    "gid": 0,
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "gid": "wheel",
+  "id": "root",
+  "zpool_featureflags": "async_destroy,empty_bpobj,lz4_compress,multi_vdev_crash_dump,spacemap_histogram,enabled_txg,hole_birth,extensible_dataset,embedded_data,bookmarks,filesystem_limits,large_blocks,large_dnode,sha512,skein,userobj_accounting,encryption,project_quota,device_removal,obsolete_counts,zpool_checkpoint,spacemap_v2,allocation_classes,resilver_defer,bookmark_v2,redaction_bookmarks,redacted_datasets,bookmark_written,log_spacemap,livelist,device_rebuild,zstd_compress,draid",
+  "memory": {
+    "swap": {
+      "available": "2.00 GiB",
+      "available_bytes": 2147483648,
+      "capacity": "0%",
+      "encrypted": true,
+      "total": "2.00 GiB",
+      "total_bytes": 2147483648,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "system": {
+      "available": "588.20 MiB",
+      "available_bytes": 616767488,
+      "capacity": "96.31%",
+      "total": "15.56 GiB",
+      "total_bytes": 16703676416,
+      "used": "14.98 GiB",
+      "used_bytes": 16086908928
+    }
+  },
+  "swapfree": "2.00 GiB",
+  "swapfree_mb": 2048.0,
+  "swapencrypted": true,
+  "swapsize": "2.00 GiB",
+  "swapsize_mb": 2048.0,
+  "memoryfree": "588.20 MiB",
+  "memoryfree_mb": 588.1953125,
+  "memorysize": "15.56 GiB",
+  "memorysize_mb": 15929.8671875,
+  "zpool_version": "5000",
+  "is_virtual": false,
+  "ssh": {
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 3b1364bc79ebe47cbc0819473b565a4d37db7193",
+        "sha256": "SSHFP 1 2 38231477b7208a359dae374706d9cebde9723b37a2c64a796fe789ffc75b4448"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCvL/poCeLBK1gzxmu1iqmuACOLUMwWEemqc9HIVVi5C9KDoiUsDqYxlaXuFgWwbDmBFE+sq4OWjnygs0MLRjfBIZex+g5WnF2qUC4rE1fvNQF9txelp6Aiw/evRsVyvzNob72fd1HEN5hwLGx8qE+fIxVeuvonGr+wBnpcZNbwOekk8K0/P4CHbxGr3n56h8PJJ2fQA3PHOqd+mcxCjMb5zGSQz5t+pnKzXd1svEC8Js9UeaQmEnwVeXs6MiacmvfZZIVrCCMsbjDjN7b8aqXAlsCbH6h13rN3dPbXRqqD9thh4s0Muo/5LfCot4foOHS2Lb62POFnTKUdQiBJiz/L",
+      "type": "ssh-rsa"
+    },
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 ae13b092229dc413afc2ce9a98a231ba12627a14",
+        "sha256": "SSHFP 3 2 5dbe20c3e1964dd815ec7f65d3149af25bc1ef18c1f0fff566f85bb97ea174ec"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNk2xlcS1xBmvExKKxqfNSYZCaZpPFz0YI8FzlPkfDN+vqD5/JUK3pJ2PfGq1tfwR/mziRoqf3EehPac5T9lMsk=",
+      "type": "ecdsa-sha2-nistp256"
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 8a93fa93b2e8500bdb50c65632106936a5dffe06",
+        "sha256": "SSHFP 4 2 4db19117c4305772ae0e063b6e26e8f324184e2706494e0d86e57dfa4a80aa4b"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIFeWKguN2ac7NBVugbxxkCy52E5r6C/ezdwa+SSr6Z7P",
+      "type": "ssh-ed25519"
+    }
+  },
+  "kernelrelease": "13.1-RELEASE",
+  "partitions": {
+    "ada0p3": {
+      "partlabel": "zfs0",
+      "partuuid": "bd1b3637-3b39-11eb-8998-5354fde7aaa0",
+      "size_bytes": 509961306112,
+      "size": "474.94 GiB"
+    },
+    "ada0p2": {
+      "partlabel": "swap0",
+      "partuuid": "bd11c1f8-3b39-11eb-8998-5354fde7aaa0",
+      "size_bytes": 2147483648,
+      "size": "2.00 GiB"
+    },
+    "ada0p1": {
+      "partlabel": "gptboot0",
+      "partuuid": "bd09bf9f-3b39-11eb-8998-5354fde7aaa0",
+      "size_bytes": 524288,
+      "size": "512.00 KiB"
+    }
+  },
+  "ruby": {
+    "platform": "amd64-freebsd13",
+    "sitedir": "/usr/local/lib/ruby/site_ruby/3.0",
+    "version": "3.0.4"
+  },
+  "rubyplatform": "amd64-freebsd13",
+  "rubysitedir": "/usr/local/lib/ruby/site_ruby/3.0",
+  "rubyversion": "3.0.4",
+  "augeas": {
+    "version": "1.12.0"
+  },
+  "augeasversion": "1.12.0",
+  "facterversion": "4.2.10",
+  "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+  "zpool_featurenumbers": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28",
+  "netmask_lo0": "255.0.0.0",
+  "netmask_bridge0": "255.0.0.0",
+  "netmask_wlan2": "255.255.255.0",
+  "network6_lo0": "::1",
+  "network_lo0": "127.0.0.0",
+  "network_bridge0": "10.0.0.0",
+  "network_wlan2": "192.168.42.0",
+  "timezone": "-10",
+  "virtual": "physical",
+  "disks": {
+    "ada0": {
+      "model": "SK hynix SC311 SATA 512GB",
+      "serial_number": "MS82N211610102R5L",
+      "size_bytes": 512110190592,
+      "size": "476.94 GiB"
+    }
+  },
+  "networking": {
+    "domain": "blogreen.org",
+    "fqdn": "fenchurch.blogreen.org",
+    "interfaces": {
+      "lo0": {
+        "mtu": 16384,
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1",
+            "scope6": "host"
+          },
+          {
+            "address": "fe80::1",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+          }
+        ],
+        "ip": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "network": "127.0.0.0",
+        "ip6": "::1",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network6": "::1",
+        "scope6": "host"
+      },
+      "bridge0": {
+        "mtu": 1500,
+        "mac": "58:9c:fc:00:77:16",
+        "bindings": [
+          {
+            "address": "10.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "10.0.0.0"
+          }
+        ],
+        "ip": "10.0.0.1",
+        "netmask": "255.0.0.0",
+        "network": "10.0.0.0"
+      },
+      "wlan2": {
+        "mtu": 1500,
+        "mac": "c8:3a:35:e1:98:5a",
+        "bindings": [
+          {
+            "address": "192.168.42.239",
+            "netmask": "255.255.255.0",
+            "network": "192.168.42.0"
+          }
+        ],
+        "ip": "192.168.42.239",
+        "netmask": "255.255.255.0",
+        "network": "192.168.42.0"
+      },
+      "vnet0.107": {
+        "mtu": 1500,
+        "mac": "00:13:ef:80:f7:be"
+      },
+      "vnet0.108": {
+        "mtu": 1500,
+        "mac": "00:13:ef:0e:ca:69"
+      },
+      "vnet0.109": {
+        "mtu": 1500,
+        "mac": "00:13:ef:39:c2:cc"
+      },
+      "vnet0.110": {
+        "mtu": 1500,
+        "mac": "00:13:ef:f9:e0:c1"
+      },
+      "vnet0.111": {
+        "mtu": 1500,
+        "mac": "00:13:ef:60:75:97"
+      }
+    },
+    "ip": "192.168.42.239",
+    "mac": "c8:3a:35:e1:98:5a",
+    "mtu": 1500,
+    "hostname": "fenchurch",
+    "netmask": "255.255.255.0",
+    "primary": "wlan2",
+    "network": "192.168.42.0"
+  },
+  "domain": "blogreen.org",
+  "fqdn": "fenchurch.blogreen.org",
+  "ipaddress": "192.168.42.239",
+  "macaddress": "c8:3a:35:e1:98:5a",
+  "hostname": "fenchurch",
+  "netmask": "255.255.255.0",
+  "network": "192.168.42.0",
+  "processors": {
+    "models": [
+      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz"
+    ],
+    "speed": "1.99 GHz",
+    "isa": "amd64",
+    "count": 8
+  },
+  "processor0": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+  "processor1": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+  "processor2": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+  "processor3": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+  "processor4": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+  "processor5": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+  "processor6": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+  "processor7": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+  "hardwareisa": "amd64",
+  "processorcount": 8,
+  "os": {
+    "hardware": "amd64",
+    "release": {
+      "full": "13.1-RELEASE",
+      "major": "13",
+      "branch": "RELEASE",
+      "minor": "1"
+    },
+    "name": "FreeBSD",
+    "architecture": "amd64",
+    "family": "FreeBSD"
+  },
+  "hardwaremodel": "amd64",
+  "operatingsystemmajrelease": "13",
+  "operatingsystemrelease": "13.1-RELEASE",
+  "operatingsystem": "FreeBSD",
+  "architecture": "amd64",
+  "kernel": "FreeBSD",
+  "dmi": {
+    "bios": {
+      "vendor": "Dell Inc.",
+      "version": "1.19.0",
+      "release_date": "12/15/2021"
+    },
+    "manufacturer": "Dell Inc.",
+    "product": {
+      "serial_number": "HFXXBL2",
+      "name": "Inspiron 5579",
+      "uuid": "4c4c4544-0046-5810-8058-c8c04f424c32"
+    }
+  },
+  "bios_vendor": "Dell Inc.",
+  "bios_version": "1.19.0",
+  "bios_release_date": "12/15/2021",
+  "manufacturer": "Dell Inc.",
+  "serialnumber": "HFXXBL2",
+  "productname": "Inspiron 5579",
+  "uuid": "4c4c4544-0046-5810-8058-c8c04f424c32",
+  "kernelmajversion": "13",
+  "kernelversion": "13.1",
+  "osfamily": "FreeBSD",
+  "load_averages": {
+    "1m": 0.30859375,
+    "5m": 0.375,
+    "15m": 0.40576171875
+  },
+  "role": "role::blogreen::fenchurch",
+  "form_factor": "Laptop",
+  "customer": "blogreen",
+  "country": "French Polynesia",
+  "city": "Faaa",
+  "puppetversion": "7.17.0",
+  "env_temp_variable": "/tmp",
+  "freebsd_reboot_required": false,
+  "has_puppet": true,
+  "has_touchscreen": true,
+  "hostcrl": "/var/puppet/ssl/crl.pem",
+  "localcacert": "/var/puppet/ssl/certs/ca.pem",
+  "mcollective": {
+    "client": {
+      "file": "/usr/local/etc/choria/client.conf",
+      "libdir": [
+        "/usr/local/share/choria/plugins",
+        "/var/puppet/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/multi_json-1.15.0/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby",
+        "/usr/local/lib/ruby/gems/3.0/gems/fast_gettext-1.8.0/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/locale-2.1.3/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/semantic_puppet-1.0.4/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/deep_merge-1.2.1/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/hocon-1.3.1/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/thor-1.2.1/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/facter-4.2.10/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/rexml-3.2.5/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/CFPropertyList-3.0.5/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/ffi-1.15.5/lib",
+        "/usr/local/lib/ruby/gems/3.0/extensions/amd64-freebsd-13/3.0/ffi-1.15.5",
+        "/usr/local/lib/ruby/gems/3.0/gems/systemu-2.6.5/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/choria-mcorpc-support-2.26.0/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/nats-pure-0.7.0/lib",
+        "/usr/local/lib/ruby/site_ruby/3.0",
+        "/usr/local/lib/ruby/site_ruby/3.0/amd64-freebsd13",
+        "/usr/local/lib/ruby/site_ruby",
+        "/usr/local/lib/ruby/vendor_ruby/3.0",
+        "/usr/local/lib/ruby/vendor_ruby/3.0/amd64-freebsd13",
+        "/usr/local/lib/ruby/vendor_ruby",
+        "/usr/local/lib/ruby/3.0",
+        "/usr/local/lib/ruby/3.0/amd64-freebsd13"
+      ],
+      "connector": "nats",
+      "securityprovider": "choria",
+      "collectives": [
+        "mcollective"
+      ],
+      "main_collective": "mcollective"
+    },
+    "server": {
+      "file": "/usr/local/etc/choria/server.conf",
+      "libdir": [
+        "/usr/local/share/choria/plugins",
+        "/var/puppet/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/multi_json-1.15.0/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby",
+        "/usr/local/lib/ruby/gems/3.0/gems/fast_gettext-1.8.0/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/locale-2.1.3/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/semantic_puppet-1.0.4/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/deep_merge-1.2.1/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/hocon-1.3.1/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/thor-1.2.1/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/facter-4.2.10/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/rexml-3.2.5/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/CFPropertyList-3.0.5/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/ffi-1.15.5/lib",
+        "/usr/local/lib/ruby/gems/3.0/extensions/amd64-freebsd-13/3.0/ffi-1.15.5",
+        "/usr/local/lib/ruby/gems/3.0/gems/systemu-2.6.5/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/choria-mcorpc-support-2.26.0/lib",
+        "/usr/local/lib/ruby/gems/3.0/gems/nats-pure-0.7.0/lib",
+        "/usr/local/lib/ruby/site_ruby/3.0",
+        "/usr/local/lib/ruby/site_ruby/3.0/amd64-freebsd13",
+        "/usr/local/lib/ruby/site_ruby",
+        "/usr/local/lib/ruby/vendor_ruby/3.0",
+        "/usr/local/lib/ruby/vendor_ruby/3.0/amd64-freebsd13",
+        "/usr/local/lib/ruby/vendor_ruby",
+        "/usr/local/lib/ruby/3.0",
+        "/usr/local/lib/ruby/3.0/amd64-freebsd13"
+      ],
+      "connector": "base",
+      "securityprovider": "base",
+      "collectives": [
+        "mcollective"
+      ],
+      "main_collective": "mcollective"
+    },
+    "puppet_major_version": 7,
+    "aio_major_version": 0
+  },
+  "os_patching": {
+    "package_updates": [
+      "ImageMagick7-nox11-7.1.0.43_1",
+      "exempi-2.5.2_1",
+      "firefox-103.0_1,2",
+      "fish-3.4.1",
+      "freerdp-2.7.0",
+      "gdk-pixbuf2-2.40.0_4",
+      "gdm-42.0_2",
+      "harfbuzz-4.4.1",
+      "harfbuzz-icu-4.4.1_1",
+      "highway-0.17.0",
+      "libjxl-0.6.1_5",
+      "maven-wrapper-1_2",
+      "nettle-3.8",
+      "pango-1.50.7",
+      "pkgconf-1.8.0,1",
+      "postfix-3.7.2,1",
+      "py39-cairo-1.18.1_2,1",
+      "py39-click-8.0.3",
+      "py39-evdev-1.4.0",
+      "py39-gobject3-3.38.0_1",
+      "py39-urllib3-1.26.10,1",
+      "pygobject3-common-3.38.0_1",
+      "ruby30-gems-3.3.18",
+      "rubygem-addressable-2.8.0",
+      "rubygem-aws-partitions-1.607.0",
+      "rubygem-aws-sdk-core-3.131.2",
+      "rubygem-aws-sdk-ec2-1.322.0",
+      "rubygem-aws-sigv4-1.5.0",
+      "rubygem-bolt-3.24.0",
+      "rubygem-bundler-2.3.18,1",
+      "rubygem-excon-0.92.3",
+      "rubygem-openssl-ccm-1.2.2",
+      "rubygem-openssl-cmac-2.0.1",
+      "rubygem-public_suffix-4.0.7_3",
+      "rubygem-puppetfile-resolver-0.6.1",
+      "talloc-2.3.1",
+      "tdb-1.4.3,1",
+      "tevent-0.10.2_1",
+      "vulkan-headers-1.3.222",
+      "vulkan-loader-1.3.222"
+    ],
+    "package_update_count": 40,
+    "missing_update_kbs": [
+
+    ],
+    "security_package_updates": [
+      "go118-1.18.4_1"
+    ],
+    "security_package_update_count": 1,
+    "blackouts": {
+    },
+    "pinned_packages": [
+
+    ],
+    "last_run": {
+    },
+    "patch_window": "",
+    "reboot_override": "default",
+    "reboots": {
+      "reboot_required": "",
+      "apps_needing_restart": {
+      },
+      "app_restart_required": false
+    },
+    "block_patching_on_warnings": "false",
+    "warnings": {
+      "version_specified_but_not_locked_packages": [
+        "nats-pure"
+      ]
+    },
+    "blocked": false,
+    "blocked_reasons": [
+
+    ]
+  },
+  "is_pe": false,
+  "pkg_has_updates": true,
+  "pkg_updates": 40,
+  "pkg_package_updates": [
+    "ImageMagick7-nox11-7.1.0.43_1",
+    "exempi-2.5.2_1",
+    "firefox-103.0_1,2",
+    "fish-3.4.1",
+    "freerdp-2.7.0",
+    "gdk-pixbuf2-2.40.0_4",
+    "gdm-42.0_2",
+    "harfbuzz-4.4.1",
+    "harfbuzz-icu-4.4.1_1",
+    "highway-0.17.0",
+    "libjxl-0.6.1_5",
+    "maven-wrapper-1_2",
+    "nettle-3.8",
+    "pango-1.50.7",
+    "pkgconf-1.8.0,1",
+    "postfix-3.7.2,1",
+    "py39-cairo-1.18.1_2,1",
+    "py39-click-8.0.3",
+    "py39-evdev-1.4.0",
+    "py39-gobject3-3.38.0_1",
+    "py39-urllib3-1.26.10,1",
+    "pygobject3-common-3.38.0_1",
+    "ruby30-gems-3.3.18",
+    "rubygem-addressable-2.8.0",
+    "rubygem-aws-partitions-1.607.0",
+    "rubygem-aws-sdk-core-3.131.2",
+    "rubygem-aws-sdk-ec2-1.322.0",
+    "rubygem-aws-sigv4-1.5.0",
+    "rubygem-bolt-3.24.0",
+    "rubygem-bundler-2.3.18,1",
+    "rubygem-excon-0.92.3",
+    "rubygem-openssl-ccm-1.2.2",
+    "rubygem-openssl-cmac-2.0.1",
+    "rubygem-public_suffix-4.0.7_3",
+    "rubygem-puppetfile-resolver-0.6.1",
+    "talloc-2.3.1",
+    "tdb-1.4.3,1",
+    "tevent-0.10.2_1",
+    "vulkan-headers-1.3.222",
+    "vulkan-loader-1.3.222"
+  ],
+  "pkg_has_vulnerabilities": true,
+  "pkg_vulnerabilities": 1,
+  "pkg_vulnerable_packages": [
+    "go118-1.18.4_1"
+  ],
+  "puppet_agent_pid": 64061,
+  "puppet_vardir": "/var/puppet",
+  "puppet_environmentpath": "/usr/local/etc/puppet/environments",
+  "puppet_server": "puppet.blogreen.org",
+  "python3_release": "3.9",
+  "python3_version": "3.9.13",
+  "root_home": "/root",
+  "service_provider": "freebsd",
+  "puppet_ssldir": "/var/puppet/ssl",
+  "puppet_digest_algorithm": "sha256",
+  "puppet_config": "/usr/local/etc/puppet/puppet.conf",
+  "puppet_stringify_facts": false,
+  "puppet_sslpaths": {
+    "privatedir": {
+      "path": "/var/puppet/ssl/private",
+      "path_exists": true
+    },
+    "privatekeydir": {
+      "path": "/var/puppet/ssl/private_keys",
+      "path_exists": true
+    },
+    "publickeydir": {
+      "path": "/var/puppet/ssl/public_keys",
+      "path_exists": true
+    },
+    "certdir": {
+      "path": "/var/puppet/ssl/certs",
+      "path_exists": true
+    },
+    "requestdir": {
+      "path": "/var/puppet/ssl/certificate_requests",
+      "path_exists": true
+    },
+    "hostcrl": {
+      "path": "/var/puppet/ssl/crl.pem",
+      "path_exists": true
+    }
+  },
+  "puppet_master_server": "puppet.blogreen.org",
+  "puppet_confdir": "/usr/local/etc/puppet",
+  "puppet_client_datadir": "/var/puppet/client_data",
+  "mco_confdir": "/usr/local/mcollective/etc",
+  "vcsrepo_svn_ver": "",
+  "package_provider": "pkgng"
+}
