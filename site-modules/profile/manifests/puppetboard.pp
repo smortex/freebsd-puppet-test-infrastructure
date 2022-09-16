@@ -5,6 +5,7 @@ class profile::puppetboard {
     puppetdb_cert       => '/usr/local/www/puppetboard/ssl/puppetdb_client_cert.pem',
     puppetdb_key        => '/usr/local/www/puppetboard/ssl/puppetdb_client_key.pem',
     puppetdb_ssl_verify => '/usr/local/www/puppetboard/ssl/ca.pem',
+    offline_mode        => true,
   }
 
   file { '/usr/local/www/puppetboard/ssl':
