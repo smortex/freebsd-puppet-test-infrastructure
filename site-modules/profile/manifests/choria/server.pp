@@ -21,6 +21,15 @@ class profile::choria::server (
       'mcollective_choria',
       'mcollective_util_actionpolicy',
     ],
+    site_policies => [
+      {
+        action  => 'allow',
+        callers => 'choria=freebsd.mcollective',
+        actions => '*',
+        facts   => '*',
+        classes => '*',
+      },
+    ],
   }
 
   Mcollective::Module_plugin <| |> ~> Class['choria::service']
