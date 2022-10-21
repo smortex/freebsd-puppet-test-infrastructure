@@ -13,4 +13,6 @@ iocage to do so, so `sysutils/iocage` MUST be installed.
 
 This repository is a Puppet
 [control-repo](https://github.com/puppetlabs/control-repo) that contains a
-bunch of scripts to setup the test infrastructure.
+bunch of scripts to setup the test infrastructure.  Check the `bin` directory
+if you are interested in this aspect, otherwise this repository is a regular
+control-repo with simple roles and profiles.
