@@ -1,4 +1,9 @@
-class profile::puppetboard {
+# @summary Setup PuppetBoard
+#
+# @param port The port the service listen on
+class profile::puppetboard (
+  Stdlib::Port $port = 8000,
+) {
   class { 'puppetboard':
     puppetdb_host       => 'puppetdb.lan',
     puppetdb_port       => 8081,
@@ -55,29 +60,7 @@ class profile::puppetboard {
     owner   => 'root',
     group   => 'wheel',
     mode    => '0755',
-    content => @(RC),
-      #!/bin/sh
-      # PROVIDE: puppetboard
-      # REQUIRE: LOGIN
-      # KEYWORD: shutdown
-
-      . /etc/rc.subr
-
-      name="puppetboard"
-      rcvar=puppetboard_enable
-      pidfile="/var/run/${name}/${name}.pid"
-
-      load_rc_config "$name"
-
-      : ${puppetboard_enable="NO"}
-      : ${puppetboard_user="puppetboard"}
-      : ${puppetboard_options="--http :8000 --wsgi-file /usr/local/www/puppetboard/wsgi.py"}
-
-      command=/usr/local/bin/uwsgi
-      command_args="--master --daemonize ${pidfile} --die-on-term --pidfile ${pidfile} ${puppetboard_options}"
-
-      run_rc_command "$1"
-      | RC
+    content => epp('profile/puppetboard/puppetboard.rc.epp'),
   }
 
   service { 'puppetboard':

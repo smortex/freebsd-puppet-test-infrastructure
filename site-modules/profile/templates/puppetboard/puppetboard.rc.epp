@@ -1,0 +1,21 @@
+#!/bin/sh
+# PROVIDE: puppetboard
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name="puppetboard"
+rcvar=puppetboard_enable
+pidfile="/var/run/${name}/${name}.pid"
+
+load_rc_config "$name"
+
+: ${puppetboard_enable="NO"}
+: ${puppetboard_user="puppetboard"}
+: ${puppetboard_options="--http :<%= $profile::puppetboard::port %> --wsgi-file /usr/local/www/puppetboard/wsgi.py"}
+
+command=/usr/local/bin/uwsgi
+command_args="--master --daemonize ${pidfile} --die-on-term --pidfile ${pidfile} ${puppetboard_options}"
+
+run_rc_command "$1"

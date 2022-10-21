@@ -3,4 +3,5 @@
 source 'https://rubygems.org'
 
 gem 'onceover'
+gem 'onceover-codequality'
 gem 'rubocop'

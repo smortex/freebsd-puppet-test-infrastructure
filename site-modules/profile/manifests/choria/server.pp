@@ -1,4 +1,6 @@
-# Choria server configuration
+# @summary Manage choria server configuration
+#
+# @param client Also manange client configuration
 class profile::choria::server (
   Boolean $client = false,
 ) {
@@ -21,7 +23,7 @@ class profile::choria::server (
       'mcollective_choria',
       'mcollective_util_actionpolicy',
     ],
-    site_policies => [
+    site_policies  => [
       {
         action  => 'allow',
         callers => 'choria=freebsd.mcollective',

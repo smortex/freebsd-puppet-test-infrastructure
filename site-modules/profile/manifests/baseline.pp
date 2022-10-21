@@ -1,3 +1,4 @@
+# @summary Base configuration we want to see on all nodes
 class profile::baseline {
   user { 'freebsd':
     ensure         => present,

@@ -1,3 +1,4 @@
+# @summary Setup r10k
 class profile::r10k {
   user { 'r10k':
     ensure     => present,
@@ -24,8 +25,8 @@ class profile::r10k {
       mode  => '0750',
       ;
     '/usr/local/etc/r10k':
-      owner  => 'root',
-      group  => 'wheel',
+      owner => 'root',
+      group => 'wheel',
       ;
     '/var/puppet/r10k':
       owner => 'r10k',
