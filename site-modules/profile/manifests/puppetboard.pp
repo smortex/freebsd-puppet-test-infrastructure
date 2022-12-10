@@ -44,7 +44,7 @@ class profile::puppetboard (
     source => "/var/puppet/ssl/private_keys/${fact('networking.fqdn')}.pem",
   }
 
-  package { 'uwsgi':
+  package { 'uwsgi-py39':
     ensure => installed,
   }
 
