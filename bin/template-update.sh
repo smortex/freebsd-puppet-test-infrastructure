@@ -36,16 +36,14 @@ TEMPLATE_NAME=$1
 
 set -ex
 
-iocage set template=no $TEMPLATE_NAME
-iocage start $TEMPLATE_NAME
+bastille start $TEMPLATE_NAME
 
 if [ $interactive -eq 1 ]; then
-  iocage console $TEMPLATE_NAME
+  bastille console $TEMPLATE_NAME
 else
-  iocage exec $TEMPLATE_NAME "pkg update"
-  iocage exec $TEMPLATE_NAME "pkg upgrade -y"
-  iocage exec $TEMPLATE_NAME "pkg fetch -yd puppet6 puppet7 puppetserver6 puppetserver7 puppetdb6 puppetdb7 puppetdb-terminus6 puppetdb-terminus7 postgresql11-server postgresql11-contrib py39-puppetboard git-lite rubygem-r10k choria rubygem-choria-mcorpc-support rubygem-net-ping uwsgi"
+  bastille cmd $TEMPLATE_NAME pkg update
+  bastille cmd $TEMPLATE_NAME pkg upgrade -y
+  bastille cmd $TEMPLATE_NAME pkg fetch -yd puppet6 puppet7 puppetserver6 puppetserver7 puppetdb6 puppetdb7 puppetdb-terminus6 puppetdb-terminus7 postgresql11-server postgresql11-contrib py39-puppetboard git-lite rubygem-r10k choria rubygem-choria-mcorpc-support rubygem-net-ping uwsgi
 fi
 
-iocage stop $TEMPLATE_NAME
-iocage set template=yes $TEMPLATE_NAME
+bastille stop $TEMPLATE_NAME

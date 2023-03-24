@@ -7,7 +7,7 @@ like to propose, or for learning how to use Puppet on FreeBSD.
 
 To run it, you MUST run FreeBSD and you MUST be able to run command as root
 (e.g. with sudo) in order to create / manage jails.  The scripts currently use
-iocage to do so, so `sysutils/iocage` MUST be installed.
+bastille to do so, so `sysutils/bastille` MUST be installed.
 
 ## Gestting started
 

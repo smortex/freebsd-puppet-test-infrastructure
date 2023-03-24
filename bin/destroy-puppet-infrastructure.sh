@@ -1,7 +1,7 @@
 #!/bin/sh
 
-iocage destroy -f puppet.lan
-iocage destroy -f puppetdb.lan
-iocage destroy -f puppetboard.lan
-iocage destroy -f node1.lan
-iocage destroy -f node2.lan
+bastille destroy force puppet
+bastille destroy force puppetdb
+bastille destroy force puppetboard
+bastille destroy force node1
+bastille destroy force node2
