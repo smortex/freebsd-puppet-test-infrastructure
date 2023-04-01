@@ -1,0 +1,9 @@
+---
+config:
+  transport: jail
+targets:
+  - puppet
+  - puppetdb
+  - puppetboard
+  - node1
+  - node2
