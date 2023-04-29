@@ -44,7 +44,7 @@ bastille clone $TEMPLATE $JAIL 10.0.0.11
 sudo bastille config puppetdb set allow.raw_sockets 1
 sudo bastille config puppetdb set allow.sysvipc 1
 bastille start $JAIL
-bastille pkg $JAIL install -y puppet${puppet_version} puppetdb${puppet_version} postgresql11-server postgresql11-client sudo icu
+bastille pkg $JAIL install -y puppet${puppet_version} puppetdb${puppet_version} postgresql11-server postgresql11-contrib postgresql11-client sudo icu
 bastille cmd $JAIL puppet apply < manifests/common.pp
 bastille sysrc $JAIL postgresql_enable=yes
 bastille cmd $JAIL service postgresql initdb
