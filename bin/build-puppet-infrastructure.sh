@@ -34,6 +34,7 @@ set -ex
 JAIL=puppet
 bastille clone $TEMPLATE $JAIL 10.0.0.10
 bastille start $JAIL
+bastille cmd $JAIL hostname $JAIL.lan
 bastille pkg $JAIL install -y puppet${puppet_version} puppetserver${puppet_version} puppetdb-terminus${puppet_version}
 bastille cmd $JAIL puppet apply < manifests/common.pp
 bastille cmd $JAIL puppet apply < manifests/puppetserver.pp
