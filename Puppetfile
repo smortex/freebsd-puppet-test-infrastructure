@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
-mod 'puppetlabs-stdlib', '9.3.0'
+mod 'puppetlabs-concat',     '9.0.0'
+mod 'puppetlabs-postgresql', '9.1.0'
+mod 'puppetlabs-stdlib',     '9.3.0'
 
 mod 'puppetlabs-cron_core',    '1.2.0'
 mod 'puppetlabs-sshkeys_core', '2.4.0'
+
+mod 'puppet-bacula', '7.0.0'
 
 # mod 'puppet-puppetboard', '9.0.0'
 # https://github.com/voxpupuli/puppet-puppetboard/pull/368

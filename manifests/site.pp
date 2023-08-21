@@ -17,3 +17,11 @@ node 'puppetdb.lan' {
 node 'puppetboard.lan' {
   include role::puppetboard
 }
+
+node 'node1.lan' {
+  include role::backupserver
+}
+
+node 'node2.lan' {
+  include role::backupclient
+}

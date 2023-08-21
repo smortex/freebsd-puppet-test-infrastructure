@@ -100,6 +100,8 @@ bastille cmd $JAIL puppet apply < manifests/common.pp
 bastille cmd $JAIL sh -c 'puppet agent -t || :'
 
 JAIL=node1
+bastille config node1 set allow.raw_sockets 1
+bastille config node1 set allow.sysvipc 1
 bastille clone $TEMPLATE $JAIL 10.0.0.100
 bastille start $JAIL
 bastille pkg $JAIL install -y puppet${puppet_version}
