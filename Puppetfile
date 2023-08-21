@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-mod 'puppetlabs-stdlib', '8.5.0'
+mod 'puppetlabs-stdlib', '9.3.0'
 
 mod 'puppetlabs-cron_core',    '1.2.0'
 mod 'puppetlabs-sshkeys_core', '2.4.0'
