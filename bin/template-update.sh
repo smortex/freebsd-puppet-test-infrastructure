@@ -43,7 +43,7 @@ if [ $interactive -eq 1 ]; then
 else
   bastille cmd $TEMPLATE_NAME pkg update
   bastille cmd $TEMPLATE_NAME pkg upgrade -y
-  bastille cmd $TEMPLATE_NAME pkg fetch -yd puppet6 puppet7 puppetserver6 puppetserver7 puppetdb6 puppetdb7 puppetdb-terminus6 puppetdb-terminus7 postgresql11-server postgresql11-contrib py39-puppetboard git-lite rubygem-r10k choria rubygem-choria-mcorpc-support rubygem-net-ping uwsgi
+  bastille cmd $TEMPLATE_NAME pkg fetch -yd puppet7 puppet8 puppetserver7 puppetserver8 puppetdb7 puppetdb8 puppetdb-terminus7 puppetdb-terminus8 postgresql11-server postgresql11-contrib py39-puppetboard git-lite rubygem-r10k choria rubygem-choria-mcorpc-support rubygem-net-ping uwsgi
 fi
 
 bastille stop $TEMPLATE_NAME
