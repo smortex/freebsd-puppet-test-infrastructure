@@ -11,5 +11,7 @@ test_infrastructure()
 
 #test_infrastructure f12 6
 #test_infrastructure f12 7
-test_infrastructure f13 6
 test_infrastructure f13 7
+test_infrastructure f13 8
+test_infrastructure f14rc4 7
+test_infrastructure f14rc4 8
