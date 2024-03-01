@@ -13,7 +13,7 @@ load_rc_config "$name"
 
 : ${puppetboard_enable="NO"}
 : ${puppetboard_user="puppetboard"}
-: ${puppetboard_options="--http :<%= $profile::puppetboard::port %> --wsgi-file /usr/local/www/puppetboard/wsgi.py"}
+: ${puppetboard_options="--http :<%= $profile::puppetboard::port %> --venv /usr/local/www/puppetboard/virtenv-puppetboard/ --wsgi-file /usr/local/www/puppetboard/wsgi.py"}
 
 command=/usr/local/bin/uwsgi
 command_args="--master --daemonize ${pidfile} --die-on-term --pidfile ${pidfile} ${puppetboard_options}"
