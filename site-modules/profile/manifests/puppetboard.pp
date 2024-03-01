@@ -6,6 +6,13 @@ class profile::puppetboard (
 ) {
   include profile::python
 
+  file { '/usr/local/www':
+    ensure => directory,
+    owner  => 'root',
+    group  => 'puppetboard',
+    mode   => '0644',
+  }
+
   class { 'puppetboard':
     install_from        => 'pip',
     python_version      => '3.9',
@@ -17,6 +24,7 @@ class profile::puppetboard (
     puppetdb_key        => '/usr/local/www/puppetboard/ssl/puppetdb_client_key.pem',
     puppetdb_ssl_verify => '/usr/local/www/puppetboard/ssl/ca.pem',
     offline_mode        => true,
+    notify              => Service['puppetboard'],
   }
 
   file { '/usr/local/www/puppetboard/ssl':
@@ -69,10 +77,6 @@ class profile::puppetboard (
           logging.exception("Error: %s", str(type(inst)))
       | WSGI
     notify  => Service['puppetboard'],
-  }
-
-  package { 'uwsgi-py39':
-    ensure => installed,
   }
 
   file { '/var/run/puppetboard':
