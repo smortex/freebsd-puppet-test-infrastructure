@@ -6,11 +6,55 @@ class profile::puppetboard (
 ) {
   include profile::python
 
-  file { '/usr/local/www':
-    ensure => directory,
-    owner  => 'root',
-    group  => 'puppetboard',
-    mode   => '0644',
+  file {
+    default:
+      owner  => 'root',
+      group  => 'wheel',
+      before => Service['puppetboard'],
+      ;
+    '/usr/local/etc/puppetboard':
+      ensure => directory,
+      mode   => '0755',
+      ;
+    '/usr/local/www':
+      ensure => directory,
+      group  => 'puppetboard',
+      mode   => '0755',
+      ;
+    '/usr/local/www/puppetboard/ssl':
+      ensure => directory,
+      mode   => '0755',
+      ;
+    '/usr/local/www/puppetboard/ssl/ca.pem':
+      ensure => file,
+      group  => 'wheel',
+      mode   => '0644',
+      source => '/var/puppet/ssl/certs/ca.pem',
+      ;
+    '/usr/local/www/puppetboard/ssl/puppetdb_client_cert.pem':
+      ensure => file,
+      group  => 'wheel',
+      mode   => '0644',
+      source => "/var/puppet/ssl/certs/${fact('networking.fqdn')}.pem",
+      ;
+    '/usr/local/www/puppetboard/ssl/puppetdb_client_key.pem':
+      ensure => file,
+      group  => 'puppetboard',
+      mode   => '0640',
+      source => "/var/puppet/ssl/private_keys/${fact('networking.fqdn')}.pem",
+      ;
+    '/var/run/puppetboard':
+      ensure => directory,
+      owner  => 'puppetboard',
+      group  => 'puppetboard',
+      mode   => '0755',
+      ;
+    '/usr/local/etc/rc.d/puppetboard':
+      ensure  => file,
+      group   => 'wheel',
+      mode    => '0755',
+      content => epp('profile/puppetboard/puppetboard.rc.epp'),
+      ;
   }
 
   class { 'puppetboard':
@@ -25,37 +69,6 @@ class profile::puppetboard (
     puppetdb_ssl_verify => '/usr/local/www/puppetboard/ssl/ca.pem',
     offline_mode        => true,
     notify              => Service['puppetboard'],
-  }
-
-  file { '/usr/local/www/puppetboard/ssl':
-    ensure => directory,
-    owner  => 'root',
-    group  => 'puppetboard',
-    mode   => '0755',
-  }
-
-  file { '/usr/local/www/puppetboard/ssl/ca.pem':
-    ensure => file,
-    owner  => 'root',
-    group  => 'puppetboard',
-    mode   => '0644',
-    source => '/var/puppet/ssl/certs/ca.pem',
-  }
-
-  file { '/usr/local/www/puppetboard/ssl/puppetdb_client_cert.pem':
-    ensure => file,
-    owner  => 'root',
-    group  => 'puppetboard',
-    mode   => '0640',
-    source => "/var/puppet/ssl/certs/${fact('networking.fqdn')}.pem",
-  }
-
-  file { '/usr/local/www/puppetboard/ssl/puppetdb_client_key.pem':
-    ensure => file,
-    owner  => 'root',
-    group  => 'puppetboard',
-    mode   => '0640',
-    source => "/var/puppet/ssl/private_keys/${fact('networking.fqdn')}.pem",
   }
 
   file { '/usr/local/www/puppetboard/wsgi.py':
@@ -79,20 +92,8 @@ class profile::puppetboard (
     notify  => Service['puppetboard'],
   }
 
-  file { '/var/run/puppetboard':
-    ensure => directory,
-    owner  => 'puppetboard',
-    group  => 'puppetboard',
-    mode   => '0755',
-  }
-
-  file { '/usr/local/etc/rc.d/puppetboard':
-    ensure  => file,
-    owner   => 'root',
-    group   => 'wheel',
-    mode    => '0755',
-    content => epp('profile/puppetboard/puppetboard.rc.epp'),
-    notify  => Service['puppetboard'],
+  package { 'uwsgi-py39':
+    ensure => installed,
   }
 
   service { 'puppetboard':
