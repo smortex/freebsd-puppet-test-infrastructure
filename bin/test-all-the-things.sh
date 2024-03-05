@@ -9,9 +9,5 @@ test_infrastructure()
   ./destroy-puppet-infrastructure.sh
 }
 
-#test_infrastructure f12 6
-#test_infrastructure f12 7
-test_infrastructure f13 7
-test_infrastructure f13 8
-test_infrastructure f14rc4 7
-test_infrastructure f14rc4 8
+test_infrastructure f14 7
+test_infrastructure f14 8
