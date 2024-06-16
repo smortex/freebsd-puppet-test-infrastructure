@@ -92,7 +92,7 @@ class profile::puppetboard (
     notify  => Service['puppetboard'],
   }
 
-  package { 'uwsgi-py39':
+  package { 'uwsgi-py311':
     ensure => installed,
   }
 

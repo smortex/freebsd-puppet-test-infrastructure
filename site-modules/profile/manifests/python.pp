@@ -1,7 +1,7 @@
 # @summary Manage Python
 class profile::python {
   class { 'python':
-    version => '39',
+    version => '311',
     dev     => 'present',
   }
 }
