@@ -59,7 +59,7 @@ class profile::puppetboard (
 
   class { 'puppetboard':
     install_from        => 'pip',
-    python_version      => '3.9',
+    python_version      => '3.11',
     basedir             => '/usr/local/www/puppetboard',
     secret_key          => stdlib::fqdn_rand_string(32),
     puppetdb_host       => 'puppetdb.lan',
