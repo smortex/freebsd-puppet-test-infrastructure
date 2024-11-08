@@ -45,7 +45,7 @@ bastille clone $TEMPLATE $JAIL 10.0.0.11
 bastille config $JAIL set allow.raw_sockets 1
 bastille config $JAIL set allow.sysvipc 1
 bastille start $JAIL
-bastille pkg $JAIL install -y puppet${puppet_version} puppetdb${puppet_version} postgresql15-server postgresql15-contrib postgresql15-client sudo icu
+bastille pkg $JAIL install -y puppet${puppet_version} puppetdb${puppet_version} postgresql16-server postgresql16-contrib postgresql16-client sudo icu
 bastille cmd $JAIL puppet apply < manifests/common.pp
 bastille sysrc $JAIL postgresql_enable=yes
 bastille cmd $JAIL service postgresql initdb
@@ -53,8 +53,8 @@ bastille cmd $JAIL service postgresql start
 bastille cmd $JAIL sh -c "echo \"CREATE ROLE puppetdb LOGIN ENCRYPTED PASSWORD 'puppetdb'\" | sudo -u postgres psql"
 bastille cmd $JAIL sh -c "echo \"CREATE DATABASE puppetdb OWNER puppetdb\" | sudo -u postgres psql"
 bastille cmd $JAIL sh -c "echo \"CREATE EXTENSION pg_trgm;\" | sudo -u postgres psql puppetdb"
-bastille cmd $JAIL sh -c "echo \"host    all             all             10.0.0.11/32        md5\" >> /var/db/postgres/data15/pg_hba.conf"
-bastille cmd $JAIL sh -c "sed -i '' -e \"s/#listen_addresses = '[^']*'/listen_addresses = '*'/\" /var/db/postgres/data15/postgresql.conf"
+bastille cmd $JAIL sh -c "echo \"host    all             all             10.0.0.11/32        md5\" >> /var/db/postgres/data16/pg_hba.conf"
+bastille cmd $JAIL sh -c "sed -i '' -e \"s/#listen_addresses = '[^']*'/listen_addresses = '*'/\" /var/db/postgres/data16/postgresql.conf"
 bastille cmd $JAIL sh -c 'service postgresql restart'
 
 bastille cmd $JAIL sh -c 'echo "subname = //10.0.0.11:5432/puppetdb" >> /usr/local/etc/puppetdb/conf.d/database.ini'
