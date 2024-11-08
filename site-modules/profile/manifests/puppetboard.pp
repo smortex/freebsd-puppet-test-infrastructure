@@ -43,6 +43,12 @@ class profile::puppetboard (
       mode   => '0640',
       source => "/var/puppet/ssl/private_keys/${fact('networking.fqdn')}.pem",
       ;
+    '/var/log/puppetboard':
+      ensure => directory,
+      owner  => 'puppetboard',
+      group  => 'puppetboard',
+      mode   => '0755',
+      ;
     '/var/run/puppetboard':
       ensure => directory,
       owner  => 'puppetboard',

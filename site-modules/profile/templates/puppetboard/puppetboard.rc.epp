@@ -7,6 +7,7 @@
 
 name="puppetboard"
 rcvar=puppetboard_enable
+logfile="/var/log/${name}/${name}.log"
 pidfile="/var/run/${name}/${name}.pid"
 
 load_rc_config "$name"
@@ -16,6 +17,6 @@ load_rc_config "$name"
 : ${puppetboard_options="--http :<%= $profile::puppetboard::port %> --venv /usr/local/www/puppetboard/virtenv-puppetboard/ --wsgi-file /usr/local/www/puppetboard/wsgi.py"}
 
 command=/usr/local/bin/uwsgi
-command_args="--master --daemonize ${pidfile} --die-on-term --pidfile ${pidfile} ${puppetboard_options}"
+command_args="--master --daemonize ${logfile} --die-on-term --pidfile ${pidfile} ${puppetboard_options}"
 
 run_rc_command "$1"
