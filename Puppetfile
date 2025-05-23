@@ -11,7 +11,9 @@ mod 'puppet-puppetboard', '10.0.0'
 
 mod 'choria-choria',                        '0.30.3'
 mod 'choria-mcollective',                   '0.14.4'
-mod 'choria-mcollective_agent_bolt_tasks',  '0.22.0'
+# mod 'choria-mcollective_agent_bolt_tasks',  '0.22.0'
+# https://github.com/choria-plugins/tasks-agent/pull/20
+mod 'choria-mcollective_agent_bolt_tasks', git: 'https://github.com/choria-plugins', ref: '60d5ce5f15b4dbcbe068f875bc989e94d5121c32'
 mod 'choria-mcollective_agent_filemgr',     '2.0.2'
 mod 'choria-mcollective_agent_nettest',     '4.0.3'
 mod 'choria-mcollective_agent_package',     '5.4.1'
