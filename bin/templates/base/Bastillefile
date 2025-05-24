@@ -1,4 +1,5 @@
 CMD mkdir -p /usr/local/etc/pkg/repos/
 CP FreeBSD.conf /usr/local/etc/pkg/repos/FreeBSD.conf
 PKG ca_root_nss
-CMD pkg fetch -yd puppet7 puppet8 puppetserver7 puppetserver8 puppetdb7 puppetdb8 puppetdb-terminus7 puppetdb-terminus8 postgresql16-server postgresql16-contrib git-lite rubygem-r10k choria rubygem-choria-mcorpc-support rubygem-net-ping uwsgi-py311
+CMD pkg upgrade -y
+CMD pkg fetch -yd openvox-agent8 openvox-server8 openvoxdb8 openvoxdb-terminus8 puppet8 puppetserver8 puppetdb8 puppetdb-terminus8 postgresql17-server postgresql17-contrib git-lite rubygem-r10k choria rubygem-choria-mcorpc-support rubygem-net-ping uwsgi-py311

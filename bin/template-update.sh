@@ -41,9 +41,7 @@ bastille start $TEMPLATE_NAME
 if [ $interactive -eq 1 ]; then
   bastille console $TEMPLATE_NAME
 else
-  bastille cmd $TEMPLATE_NAME pkg update
-  bastille cmd $TEMPLATE_NAME pkg upgrade -y
-  bastille cmd $TEMPLATE_NAME pkg fetch -yd puppet7 puppet8 puppetserver7 puppetserver8 puppetdb7 puppetdb8 puppetdb-terminus7 puppetdb-terminus8 postgresql16-server postgresql16-contrib git-lite rubygem-r10k choria rubygem-choria-mcorpc-support rubygem-net-ping uwsgi-py311
+  bastille template $TEMPLATE_NAME templates/base
 fi
 
 bastille stop $TEMPLATE_NAME
