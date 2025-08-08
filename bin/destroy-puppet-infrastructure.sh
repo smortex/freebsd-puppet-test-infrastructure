@@ -1,7 +1,7 @@
 #!/bin/sh
 
-bastille destroy --auto puppet
-bastille destroy --auto puppetdb
-bastille destroy --auto puppetboard
-bastille destroy --auto node1
-bastille destroy --auto node2
+bastille destroy --auto --yes puppet
+bastille destroy --auto --yes puppetdb
+bastille destroy --auto --yes puppetboard
+bastille destroy --auto --yes node1
+bastille destroy --auto --yes node2
