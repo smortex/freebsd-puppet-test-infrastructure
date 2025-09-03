@@ -64,9 +64,7 @@ class profile::puppetboard (
   }
 
   class { 'puppetboard':
-    install_from        => 'pip',
-    python_version      => "${profile::python::major}.${profile::python::minor}",
-    basedir             => '/usr/local/www/puppetboard',
+    package_name        => 'py311-puppetboard',
     secret_key          => stdlib::fqdn_rand_string(32),
     puppetdb_host       => 'puppetdb.lan',
     puppetdb_port       => 8081,
@@ -75,27 +73,6 @@ class profile::puppetboard (
     puppetdb_ssl_verify => '/usr/local/www/puppetboard/ssl/ca.pem',
     offline_mode        => true,
     notify              => Service['puppetboard'],
-  }
-
-  file { '/usr/local/www/puppetboard/wsgi.py':
-    ensure  => file,
-    owner   => 'root',
-    group   => 'wheel',
-    content => @(WSGI),
-      from __future__ import absolute_import
-      import os
-      import logging
-
-      logging.basicConfig(filename='/tmp/puppetboard.log', level=logging.DEBUG)
-
-      os.environ['PUPPETBOARD_SETTINGS'] = '/usr/local/etc/puppetboard/settings.py'
-
-      try:
-          from puppetboard.app import app as application  # noqa: F401
-      except Exception as inst:
-          logging.exception("Error: %s", str(type(inst)))
-      | WSGI
-    notify  => Service['puppetboard'],
   }
 
   package { "uwsgi-py${profile::python::major}${profile::python::minor}":
