@@ -65,7 +65,7 @@ class profile::puppetboard (
 
   class { 'puppetboard':
     install_from        => 'pip',
-    python_version      => '3.11',
+    python_version      => "${profile::python::major}.${profile::python::minor}",
     basedir             => '/usr/local/www/puppetboard',
     secret_key          => stdlib::fqdn_rand_string(32),
     puppetdb_host       => 'puppetdb.lan',
@@ -98,7 +98,7 @@ class profile::puppetboard (
     notify  => Service['puppetboard'],
   }
 
-  package { 'uwsgi-py311':
+  package { "uwsgi-py${profile::python::major}${profile::python::minor}":
     ensure => installed,
   }
 

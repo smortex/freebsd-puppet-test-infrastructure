@@ -13,7 +13,9 @@ mod 'choria-choria',                        '0.31.0'
 mod 'choria-mcollective',                   '0.14.6'
 # mod 'choria-mcollective_agent_bolt_tasks',  '0.22.0'
 # https://github.com/choria-plugins/tasks-agent/pull/20
-mod 'choria-mcollective_agent_bolt_tasks', git: 'https://github.com/choria-plugins/tasks-agent', ref: '60d5ce5f15b4dbcbe068f875bc989e94d5121c32'
+mod 'choria-mcollective_agent_bolt_tasks',
+    git: 'https://github.com/choria-plugins/tasks-agent',
+    ref: '60d5ce5f15b4dbcbe068f875bc989e94d5121c32'
 mod 'choria-mcollective_agent_filemgr',     '2.1.0'
 mod 'choria-mcollective_agent_nettest',     '4.1.0'
 mod 'choria-mcollective_agent_package',     '5.5.1'
