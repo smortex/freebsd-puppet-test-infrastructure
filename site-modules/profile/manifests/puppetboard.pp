@@ -14,6 +14,8 @@ class profile::puppetboard (
       mode   => '0755',
       before => Service['puppetboard'],
       ;
+    '/usr/local/etc/puppetboard':
+      ;
     '/usr/local/etc/puppetboard/ssl':
       ;
     '/usr/local/etc/puppetboard/ssl/ca.pem':
