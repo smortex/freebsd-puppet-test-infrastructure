@@ -20,6 +20,7 @@ class profile::choria::server (
       'mcollective_agent_package',
       'mcollective_agent_puppet',
       'mcollective_agent_service',
+      'mcollective_agent_shell',
       'mcollective_choria',
       'mcollective_util_actionpolicy',
     ],
