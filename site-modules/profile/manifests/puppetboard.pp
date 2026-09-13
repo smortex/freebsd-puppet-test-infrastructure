@@ -4,7 +4,9 @@
 class profile::puppetboard (
   Stdlib::Port $port = 8000,
 ) {
-  $python_version = '311'
+  include profile::python
+
+  $python_version = "${profile::python::major}${profile::python::minor}"
 
   file {
     default:
