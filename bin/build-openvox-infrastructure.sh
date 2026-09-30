@@ -38,6 +38,8 @@ bastille clone $TEMPLATE $JAIL 10.0.0.10
 bastille start $JAIL
 bastille cmd $JAIL hostname $JAIL.lan
 bastille pkg $JAIL install -y openvox-agent${puppet_version} openvox-server${puppet_version} openvoxdb-terminus${puppet_version}
+jexec $JAIL puppet config set --section main server puppet.lan
+jexec $JAIL puppet config set --section main dns_alt_names puppet,puppet.lan
 jexec $JAIL puppet apply < manifests/common.pp
 jexec $JAIL puppet apply < manifests/puppetserver.pp
 bastille cmd $JAIL service puppetserver restart
@@ -48,6 +50,7 @@ bastille config $JAIL set allow.raw_sockets 1
 bastille config $JAIL set allow.sysvipc 1
 bastille start $JAIL
 bastille pkg $JAIL install -y openvox-agent${puppet_version} openvoxdb${puppet_version} postgresql${postgresql_version}-server postgresql${postgresql_version}-contrib postgresql${postgresql_version}-client sudo icu
+jexec $JAIL puppet config set --section main server puppet.lan
 jexec $JAIL puppet apply < manifests/common.pp
 bastille sysrc $JAIL postgresql_enable=yes
 bastille cmd $JAIL service postgresql initdb
@@ -78,12 +81,9 @@ jexec puppet tee /usr/local/etc/puppet/puppetdb.conf << EOT
 [main]
 server_urls = https://puppetdb.lan:8081
 EOT
-jexec puppet tee /usr/local/etc/puppet/puppet.conf << EOT
-[master]
-  storeconfigs = true
-  storeconfigs_backend = puppetdb
-  reports = puppetdb
-EOT
+jexec puppet puppet config set --section main storeconfigs true
+jexec puppet puppet config set --section main storeconfigs_backend puppetdb
+jexec puppet puppet config set --section main reports puppetdb
 jexec puppet tee /usr/local/etc/puppet/routes.yaml << EOT
 ---
 master:
@@ -98,6 +98,7 @@ JAIL=puppetboard
 bastille clone $TEMPLATE $JAIL 10.0.0.12
 bastille start $JAIL
 bastille pkg $JAIL install -y openvox-agent${puppet_version}
+jexec $JAIL puppet config set --section main server puppet.lan
 jexec $JAIL puppet apply < manifests/common.pp
 bastille cmd $JAIL sh -c 'puppet agent -t || :'
 
@@ -107,6 +108,7 @@ bastille config $JAIL set allow.raw_sockets 1
 bastille config $JAIL set allow.sysvipc 1
 bastille start $JAIL
 bastille pkg $JAIL install -y openvox-agent${puppet_version}
+jexec $JAIL puppet config set --section main server puppet.lan
 jexec $JAIL puppet apply < manifests/common.pp
 bastille cmd $JAIL sh -c 'puppet agent -t || :'
 
@@ -114,6 +116,7 @@ JAIL=node2
 bastille clone  $TEMPLATE $JAIL 10.0.0.101
 bastille start $JAIL
 bastille pkg $JAIL install -y openvox-agent${puppet_version}
+jexec $JAIL puppet config set --section main server puppet.lan
 jexec $JAIL puppet apply < manifests/common.pp
 bastille cmd $JAIL sh -c 'puppet agent -t || :'
 
