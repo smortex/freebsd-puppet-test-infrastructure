@@ -6,7 +6,7 @@ class profile::baseline {
     managehome     => true,
     password       => '*',
     purge_ssh_keys => true,
-    shell          => '/bin/tcsh',
+    shell          => '/bin/sh',
   }
 
   ssh_authorized_key { 'romain@fenchurch':
