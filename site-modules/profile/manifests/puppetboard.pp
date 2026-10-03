@@ -61,6 +61,7 @@ class profile::puppetboard (
     puppetdb_ssl_verify => '/usr/local/etc/puppetboard/ssl/ca.pem',
     offline_mode        => true,
     notify              => Service['puppetboard'],
+    query_presets_file  => '/usr/local/etc/puppetboard/query_pressets.yaml',
   }
 
   package { "uwsgi-py${python_version}":
