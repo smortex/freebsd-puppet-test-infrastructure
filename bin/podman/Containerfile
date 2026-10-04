@@ -1,0 +1,9 @@
+ARG FREEBSD_RELEASE
+FROM ghcr.io/freebsd/freebsd-notoolchain:${FREEBSD_RELEASE}
+COPY entrypoint.sh /
+CMD /entrypoint.sh
+# FIXME: rubygem-ffi fail to find libc.so, add this as a workaround but we
+# should not need to do anything.
+RUN ln -s /lib/libc.so.7 /lib/libc.so
+
+COPY FreeBSD.conf /usr/local/etc/pkg/repos/FreeBSD.conf
