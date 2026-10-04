@@ -1,4 +1,4 @@
-# FreeBSD OpenVox (legcy Puppet) test infrastructure
+# FreeBSD OpenVox (legacy Puppet) test infrastructure
 
 This repository include all the tooling to setup and test a FreeBSD OpenVox infrastructure.
 This infrastructure is composed of a bunch of nodes setup as jails by `sysutils/podman`:
@@ -40,7 +40,7 @@ You are now ready setup the infrastructure by specifying the FreeBSD version (e.
 
 [Bolt] 3.27.1 introduced [transport for FreeBSD jails].
 This repo is now also a [Bolt project] that can target jails.
-In the furure, the various scripts in the `bin` directory may be replaced by tasks and plan to help covering Bolt features and detect regressions in Bolt too.
+In the future, the various scripts in the `bin` directory may be replaced by tasks and plan to help covering Bolt features and detect regressions in Bolt too.
 
 [Bolt]:https://www.puppet.com/docs/bolt/latest/bolt.html
 [transport for FreeBSD jails]:https://github.com/puppetlabs/bolt/pull/3170
