@@ -15,40 +15,40 @@ class profile::puppetboard (
       group  => 'wheel',
       mode   => '0755',
       before => Service['puppetboard'],
-      ;
+    ;
     '/usr/local/etc/puppetboard':
-      ;
+    ;
     '/usr/local/etc/puppetboard/ssl':
-      ;
+    ;
     '/usr/local/etc/puppetboard/ssl/ca.pem':
       ensure => file,
       mode   => '0644',
       source => '/var/puppet/ssl/certs/ca.pem',
-      ;
+    ;
     '/usr/local/etc/puppetboard/ssl/puppetdb_client_cert.pem':
       ensure => file,
       mode   => '0644',
       source => "/var/puppet/ssl/certs/${fact('networking.fqdn')}.pem",
-      ;
+    ;
     '/usr/local/etc/puppetboard/ssl/puppetdb_client_key.pem':
       ensure => file,
       group  => 'puppetboard',
       mode   => '0640',
       source => "/var/puppet/ssl/private_keys/${fact('networking.fqdn')}.pem",
-      ;
+    ;
     '/var/log/puppetboard':
       owner => 'puppetboard',
       group => 'puppetboard',
-      ;
+    ;
     '/var/run/puppetboard':
       owner => 'puppetboard',
       group => 'puppetboard',
-      ;
+    ;
     '/usr/local/etc/rc.d/puppetboard':
       ensure  => file,
       mode    => '0755',
       content => epp('profile/puppetboard/puppetboard.rc.epp'),
-      ;
+    ;
   }
 
   class { 'puppetboard':
