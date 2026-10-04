@@ -1,0 +1,438 @@
+{
+  "augeas": {
+    "version": "1.14.0"
+  },
+  "disks": {
+    "ada0": {
+      "model": "Samsung SSD 850 PRO 512GB",
+      "size": "476.94 GiB",
+      "size_bytes": 512110190592
+    },
+    "ada1": {
+      "model": "HFS128G39TND-N210A",
+      "size": "119.24 GiB",
+      "size_bytes": 128035676160
+    }
+  },
+  "dmi": {
+    "bios": {
+      "vendor": "coreboot"
+    },
+    "manufacturer": "Purism",
+    "product": {
+      "name": "Librem 15 v3"
+    }
+  },
+  "facterversion": "6.2.1",
+  "identity": {
+    "gid": 0,
+    "group": "wheel",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "is_pe": false,
+  "is_virtual": true,
+  "kernel": "FreeBSD",
+  "kernelmajversion": "15",
+  "kernelrelease": "15.1-RELEASE-p4",
+  "kernelversion": "15.1",
+  "load_averages": {
+    "15m": 0.60400390625,
+    "1m": 0.548828125,
+    "5m": 0.6083984375
+  },
+  "mcollective": {
+    "aio_major_version": 0,
+    "client": {
+      "collectives": [
+        "mcollective"
+      ],
+      "connector": "nats",
+      "file": "/usr/local/etc/choria/client.conf",
+      "libdir": [
+        "/usr/local/share/choria/plugins",
+        "/var/puppet/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/getoptlong-0.2.1/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/concurrent-ruby-1.3.8/lib/concurrent-ruby",
+        "/usr/local/lib/ruby/gems/3.4/gems/singleton-0.3.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/forwardable-1.4.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/prime-0.1.4/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/racc-1.8.1/lib",
+        "/usr/local/lib/ruby/gems/3.4/extensions/amd64-freebsd-15/3.4/racc-1.8.1",
+        "/usr/local/lib/ruby/gems/3.4/gems/fast_gettext-4.1.1/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/fiddle-1.1.8/lib",
+        "/usr/local/lib/ruby/gems/3.4/extensions/amd64-freebsd-15/3.4/fiddle-1.1.8",
+        "/usr/local/lib/ruby/gems/3.4/gems/locale-2.1.5/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/semantic_puppet-1.1.1/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/base64-0.3.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/deep_merge-1.2.2/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/benchmark-0.5.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/hocon-1.4.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/logger-1.7.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/ostruct-0.6.3/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/thor-1.5.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/tsort-0.2.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/openfact-6.2.1/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/ffi-1.17.4/lib",
+        "/usr/local/lib/ruby/gems/3.4/extensions/amd64-freebsd-15/3.4/ffi-1.17.4",
+        "/usr/local/lib/ruby/gems/3.4/gems/rexml-3.4.4/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/sys-filesystem-1.6.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/systemu-2.6.5/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/choria-mcorpc-support-2.27.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/nats-pure-0.7.0/lib",
+        "/usr/local/lib/ruby/site_ruby/3.4",
+        "/usr/local/lib/ruby/site_ruby/3.4/amd64-freebsd15",
+        "/usr/local/lib/ruby/site_ruby",
+        "/usr/local/lib/ruby/vendor_ruby/3.4",
+        "/usr/local/lib/ruby/vendor_ruby/3.4/amd64-freebsd15",
+        "/usr/local/lib/ruby/vendor_ruby",
+        "/usr/local/lib/ruby/3.4",
+        "/usr/local/lib/ruby/3.4/amd64-freebsd15",
+        "/usr/local/etc/puppet/vendor_modules/cron_core/lib",
+        "/usr/local/etc/puppet/vendor_modules/scheduled_task/lib",
+        "/usr/local/etc/puppet/vendor_modules/augeas_core/lib",
+        "/usr/local/etc/puppet/vendor_modules/host_core/lib",
+        "/usr/local/etc/puppet/vendor_modules/yumrepo_core/lib",
+        "/usr/local/etc/puppet/vendor_modules/sshkeys_core/lib",
+        "/usr/local/etc/puppet/vendor_modules/zfs_core/lib",
+        "/usr/local/etc/puppet/vendor_modules/selinux_core/lib",
+        "/usr/local/etc/puppet/vendor_modules/mount_core/lib"
+      ],
+      "main_collective": "mcollective",
+      "securityprovider": "choria"
+    },
+    "puppet_major_version": 9,
+    "server": {
+      "collectives": [
+        "mcollective"
+      ],
+      "connector": "base",
+      "file": "/usr/local/etc/choria/server.conf",
+      "libdir": [
+        "/usr/local/share/choria/plugins",
+        "/var/puppet/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/getoptlong-0.2.1/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/concurrent-ruby-1.3.8/lib/concurrent-ruby",
+        "/usr/local/lib/ruby/gems/3.4/gems/singleton-0.3.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/forwardable-1.4.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/prime-0.1.4/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/racc-1.8.1/lib",
+        "/usr/local/lib/ruby/gems/3.4/extensions/amd64-freebsd-15/3.4/racc-1.8.1",
+        "/usr/local/lib/ruby/gems/3.4/gems/fast_gettext-4.1.1/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/fiddle-1.1.8/lib",
+        "/usr/local/lib/ruby/gems/3.4/extensions/amd64-freebsd-15/3.4/fiddle-1.1.8",
+        "/usr/local/lib/ruby/gems/3.4/gems/locale-2.1.5/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/semantic_puppet-1.1.1/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/base64-0.3.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/deep_merge-1.2.2/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/benchmark-0.5.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/hocon-1.4.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/logger-1.7.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/ostruct-0.6.3/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/thor-1.5.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/tsort-0.2.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/openfact-6.2.1/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/ffi-1.17.4/lib",
+        "/usr/local/lib/ruby/gems/3.4/extensions/amd64-freebsd-15/3.4/ffi-1.17.4",
+        "/usr/local/lib/ruby/gems/3.4/gems/rexml-3.4.4/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/sys-filesystem-1.6.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/systemu-2.6.5/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/choria-mcorpc-support-2.27.0/lib",
+        "/usr/local/lib/ruby/gems/3.4/gems/nats-pure-0.7.0/lib",
+        "/usr/local/lib/ruby/site_ruby/3.4",
+        "/usr/local/lib/ruby/site_ruby/3.4/amd64-freebsd15",
+        "/usr/local/lib/ruby/site_ruby",
+        "/usr/local/lib/ruby/vendor_ruby/3.4",
+        "/usr/local/lib/ruby/vendor_ruby/3.4/amd64-freebsd15",
+        "/usr/local/lib/ruby/vendor_ruby",
+        "/usr/local/lib/ruby/3.4",
+        "/usr/local/lib/ruby/3.4/amd64-freebsd15",
+        "/usr/local/etc/puppet/vendor_modules/cron_core/lib",
+        "/usr/local/etc/puppet/vendor_modules/scheduled_task/lib",
+        "/usr/local/etc/puppet/vendor_modules/augeas_core/lib",
+        "/usr/local/etc/puppet/vendor_modules/host_core/lib",
+        "/usr/local/etc/puppet/vendor_modules/yumrepo_core/lib",
+        "/usr/local/etc/puppet/vendor_modules/sshkeys_core/lib",
+        "/usr/local/etc/puppet/vendor_modules/zfs_core/lib",
+        "/usr/local/etc/puppet/vendor_modules/selinux_core/lib",
+        "/usr/local/etc/puppet/vendor_modules/mount_core/lib"
+      ],
+      "main_collective": "mcollective",
+      "securityprovider": "base"
+    }
+  },
+  "memory": {
+    "swap": {
+      "available": "1.79 GiB",
+      "available_bytes": 1922195456,
+      "capacity": "10.49%",
+      "encrypted": true,
+      "total": "2.00 GiB",
+      "total_bytes": 2147483648,
+      "used": "214.85 MiB",
+      "used_bytes": 225288192
+    },
+    "system": {
+      "available": "6.32 GiB",
+      "available_bytes": 6789365760,
+      "capacity": "59.16%",
+      "total": "15.48 GiB",
+      "total_bytes": 16622989312,
+      "used": "9.16 GiB",
+      "used_bytes": 9833623552
+    }
+  },
+  "mountpoints": {
+    "/": {
+      "available": "92.77 GiB",
+      "available_bytes": 99613798400,
+      "capacity": "0.32%",
+      "device": "zroot/containers/215271d8e04eaf208903d30c654f3377823171544d174955569097541ba2c5cb",
+      "filesystem": "zfs",
+      "options": [
+        "nfsv4acls",
+        "local",
+        "noatime"
+      ],
+      "size": "93.07 GiB",
+      "size_bytes": 99936854016,
+      "used": "308.09 MiB",
+      "used_bytes": 323055616
+    },
+    "/dev": {
+      "available": "1.00 KiB",
+      "available_bytes": 1024,
+      "capacity": "0%",
+      "device": "devfs",
+      "filesystem": "devfs",
+      "options": [
+        "ignore"
+      ],
+      "size": "1.00 KiB",
+      "size_bytes": 1024,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/fd": {
+      "available": "1.00 KiB",
+      "available_bytes": 1024,
+      "capacity": "0%",
+      "device": "fdescfs",
+      "filesystem": "fdescfs",
+      "options": [
+        "ignore"
+      ],
+      "size": "1.00 KiB",
+      "size_bytes": 1024,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/etc/hosts": {
+      "available": "92.77 GiB",
+      "available_bytes": 99613798400,
+      "capacity": "55.18%",
+      "device": "/var/run/containers/storage/zfs-containers/3beaa36c65d9cccbddbf6f1f9ce36ee7d85877ba02d90c485f9d31e5634441f8/userdata/hosts",
+      "filesystem": "nullfs",
+      "options": [
+        "local",
+        "ignore"
+      ],
+      "size": "206.99 GiB",
+      "size_bytes": 222253867008,
+      "used": "114.22 GiB",
+      "used_bytes": 122640068608
+    },
+    "/etc/resolv.conf": {
+      "available": "92.77 GiB",
+      "available_bytes": 99613798400,
+      "capacity": "55.18%",
+      "device": "/var/run/containers/storage/zfs-containers/3beaa36c65d9cccbddbf6f1f9ce36ee7d85877ba02d90c485f9d31e5634441f8/userdata/resolv.conf",
+      "filesystem": "nullfs",
+      "options": [
+        "local",
+        "ignore"
+      ],
+      "size": "206.99 GiB",
+      "size_bytes": 222253867008,
+      "used": "114.22 GiB",
+      "used_bytes": 122640068608
+    },
+    "/var/run/.containerenv": {
+      "available": "92.77 GiB",
+      "available_bytes": 99613798400,
+      "capacity": "55.18%",
+      "device": "/var/run/containers/storage/zfs-containers/3beaa36c65d9cccbddbf6f1f9ce36ee7d85877ba02d90c485f9d31e5634441f8/userdata/.containerenv",
+      "filesystem": "nullfs",
+      "options": [
+        "local",
+        "ignore"
+      ],
+      "size": "206.99 GiB",
+      "size_bytes": 222253867008,
+      "used": "114.22 GiB",
+      "used_bytes": 122640068608
+    }
+  },
+  "networking": {
+    "domain": "lan",
+    "fqdn": "node1.lan",
+    "hostname": "node1",
+    "interfaces": {
+      "eth0": {
+        "bindings": [
+          {
+            "address": "10.0.0.100",
+            "netmask": "255.255.255.0",
+            "network": "10.0.0.0"
+          }
+        ],
+        "flags": [
+          "UP",
+          "BROADCAST",
+          "RUNNING",
+          "SIMPLEX",
+          "MULTICAST",
+          "LOWER_UP"
+        ],
+        "groups": [
+          "epair"
+        ],
+        "ip": "10.0.0.100",
+        "mac": "58:9c:fc:10:1c:25",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "network": "10.0.0.0"
+      },
+      "lo0": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1",
+            "scope6": "host"
+          },
+          {
+            "address": "fe80::1",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+          }
+        ],
+        "flags": [
+          "UP",
+          "LOOPBACK",
+          "RUNNING",
+          "MULTICAST",
+          "LOWER_UP"
+        ],
+        "groups": [
+          "lo"
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 16384,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1",
+        "scope6": "host"
+      }
+    },
+    "ip": "10.0.0.100",
+    "mac": "58:9c:fc:10:1c:25",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "network": "10.0.0.0",
+    "primary": "eth0"
+  },
+  "os": {
+    "architecture": "amd64",
+    "family": "FreeBSD",
+    "hardware": "amd64",
+    "name": "FreeBSD",
+    "release": {
+      "branch": "RELEASE",
+      "full": "15.1-RELEASE",
+      "major": "15",
+      "minor": "1"
+    }
+  },
+  "package_provider": "pkgng",
+  "partitions": {
+    "ada0p1": {
+      "partlabel": "gptboot0",
+      "partuuid": "503d3458-c135-11e8-bd11-7d7cd061b26f",
+      "size": "512.00 KiB",
+      "size_bytes": 524288
+    },
+    "ada0p2": {
+      "partlabel": "swap0",
+      "partuuid": "5048d40d-c135-11e8-bd11-7d7cd061b26f",
+      "size": "2.00 GiB",
+      "size_bytes": 2147483648
+    },
+    "ada0p3": {
+      "partlabel": "zfs0",
+      "partuuid": "504f1547-c135-11e8-bd11-7d7cd061b26f",
+      "size": "474.94 GiB",
+      "size_bytes": 509961306112
+    },
+    "ada1s1": {
+      "size": "1.13 GiB",
+      "size_bytes": 1207960064
+    },
+    "ada1s2": {
+      "size": "118.12 GiB",
+      "size_bytes": 126825699840
+    }
+  },
+  "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+  "processors": {
+    "count": 4,
+    "isa": "amd64",
+    "models": [
+      "Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz",
+      "Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz",
+      "Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz",
+      "Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz"
+    ],
+    "speed": "2.59 GHz"
+  },
+  "puppet_environmentpath": "/usr/local/etc/puppet/environments",
+  "puppet_server": "puppet.lan",
+  "puppet_vardir": "/var/puppet",
+  "puppetversion": "9.0.0",
+  "root_home": "/root",
+  "ruby": {
+    "platform": "amd64-freebsd15",
+    "sitedir": "/usr/local/lib/ruby/site_ruby/3.4",
+    "version": "3.4.9"
+  },
+  "service_provider": "freebsd",
+  "ssh": {},
+  "system_uptime": {
+    "days": 0,
+    "hours": 3,
+    "seconds": 12726,
+    "uptime": "3:32 hours"
+  },
+  "timezone": "UTC",
+  "virtual": "jail",
+  "zfs_featurenumbers": "1,2,3,4,5",
+  "zfs_version": "5",
+  "zpool_featureflags": "async_destroy,empty_bpobj,lz4_compress,multi_vdev_crash_dump,spacemap_histogram,enabled_txg,hole_birth,extensible_dataset,embedded_data,bookmarks,filesystem_limits,large_blocks,large_dnode,sha512,skein,edonr,userobj_accounting,encryption,project_quota,device_removal,obsolete_counts,zpool_checkpoint,spacemap_v2,allocation_classes,resilver_defer,bookmark_v2,redaction_bookmarks,redacted_datasets,bookmark_written,log_spacemap,livelist,device_rebuild,zstd_compress,draid,zilsaxattr,head_errlog,blake3,block_cloning,vdev_zaps_v2,redaction_list_spill,raidz_expansion,fast_dedup,longname,large_microzap,dynamic_gang_header,block_cloning_endian,physical_rewrite",
+  "zpool_featurenumbers": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28",
+  "zpool_version": "5000",
+  "implementation": "openvox",
+  "clientcert": "node1.lan",
+  "clientversion": "9.0.0",
+  "clientnoop": false
+}

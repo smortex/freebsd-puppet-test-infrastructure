@@ -4,8 +4,7 @@ classes:
   - /^profile::/
 
 nodes:
-  - FreeBSD-13.1-64-legacy
-  - FreeBSD-13.1-64-no-legacy
+  - FreeBSD-15.1-64
 
 test_matrix:
   - all_nodes:
